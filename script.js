@@ -65,6 +65,10 @@ const displayTable = () => {
 
 const displayStudents = () => {
     studentContainer.innerHTML = ""
+    if(students.length==0){
+        studentContainer.innerHTML = "Student List is empty !"
+        return
+    }
     students.forEach((student, index) => {
         let tr = document.createElement('tr')
         tr.innerHTML = `
